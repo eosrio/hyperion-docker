@@ -1,4 +1,5 @@
 .idea
 ship/
 nodeos/leap/data
+nodeos/leap/config
 ca.crt
