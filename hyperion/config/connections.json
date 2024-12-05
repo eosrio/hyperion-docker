@@ -25,8 +25,8 @@
       "local": {
         "name": "LocalNet",
         "chain_id": "f7a3fe6bf7dc0b011e25cee41ed9526b70a9702ca74599692852304cb36fdb2b",
-        "http": "http://leap-node:38888",
-        "ship": "ws://leap-node:38080",
+        "http": "http://leap:8888",
+        "ship": "ws://leap:38080",
         "WS_ROUTER_PORT": 7001,
         "WS_ROUTER_HOST": "127.0.0.1"
       }
