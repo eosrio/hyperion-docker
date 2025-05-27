@@ -10,7 +10,7 @@ services:
       - ./config/connections.json:/hyperion-history-api/config/connections.json
     networks:
       - hyperion
-    #command: ./run.sh local-indexer
+    command: ./run.sh local-indexer
 
   api:
     build: .
@@ -23,7 +23,7 @@ services:
       - ./config/connections.json:/hyperion-history-api/config/connections.json
     networks:
       - hyperion
-    #command: ./run.sh local-api
+    command: ./run.sh local-api
 
 networks:
   hyperion:

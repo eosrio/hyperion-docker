@@ -6,4 +6,4 @@ RUN git clone --branch release/3.6 --single-branch https://github.com/eosrio/hyp
 WORKDIR /hyperion-history-api
 #RUN git checkout releases/3.6
 RUN npm install
-CMD ["tail", "-f", "/dev/null"]
+#CMD ["tail", "-f", "/dev/null"]
