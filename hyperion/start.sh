@@ -1,33 +1,33 @@
 #!/bin/sh
 
-# Buscar senha do elasticsearch do arquivo .env
+# Get elasticsearch password from .env file
 ENV_FILE="../../elastic-start-local/.env"
 
 if [ -f "$ENV_FILE" ]; then
-    # Extrair a senha do elasticsearch do arquivo .env
+    # Extract elasticsearch password from .env file
     ES_PASSWORD=$(grep "ES_LOCAL_PASSWORD=" "$ENV_FILE" | cut -d'=' -f2)
     
     if [ -n "$ES_PASSWORD" ]; then
-        echo "Senha do Elasticsearch encontrada"
+        echo "Elasticsearch password found"
         
-        # Substituir a senha no arquivo connections.json
+        # Replace password in connections.json file
         CONFIG_FILE="./config/connections.json"
         
         if [ -f "$CONFIG_FILE" ]; then
-            # Substituir ELASTIC_PASSWORD pela senha real
+            # Replace ELASTIC_PASSWORD with actual password
             sed -i "s/\"ELASTIC_PASSWORD\"/\"$ES_PASSWORD\"/g" "$CONFIG_FILE"
             
-            echo "Senha atualizada no arquivo connections.json"
+            echo "Password updated in connections.json file"
         else
-            echo "Erro: Arquivo $CONFIG_FILE não encontrado"
+            echo "Error: $CONFIG_FILE file not found"
             exit 1
         fi
     else
-        echo "Erro: Senha do Elasticsearch não encontrada no arquivo .env"
+        echo "Error: Elasticsearch password not found in .env file"
         exit 1
     fi
 else
-    echo "Erro: Arquivo $ENV_FILE não encontrado"
+    echo "Error: $ENV_FILE file not found"
     exit 1
 fi
 
