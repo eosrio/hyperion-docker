@@ -55,12 +55,6 @@ services:
       - hyperion
 
 volumes:
-  # certs:
-  #   driver: local
-  # es_data:
-  #   driver: local
-  # kibana_data:
-  #   driver: local
   rabbitmq:
     driver: local
   redis:

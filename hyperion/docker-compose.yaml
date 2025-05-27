@@ -4,8 +4,8 @@ services:
     build: .
     # restart: on-failure
     volumes:
-      - ./config/connections.json:/hyperion-history-api/connections.json
-      - ./config/chains/:/hyperion-history-api/chains/
+      - ./config/connections.json:/hyperion-history-api/config/connections.json
+      - ./config/chains/:/hyperion-history-api/config/chains/
     networks:
       - hyperion
     command: ./run.sh local-indexer
