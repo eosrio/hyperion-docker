@@ -132,5 +132,8 @@
     "block": 100,
     "index": 500
   },
-  "plugins": {}
+  "plugins": {},
+  "hub": {
+    "custom_indexer_controller": "indexer:7002"
+  }
 }

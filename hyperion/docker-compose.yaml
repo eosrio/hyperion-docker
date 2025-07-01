@@ -3,6 +3,8 @@ services:
   indexer:
     build: .
     # restart: on-failure
+    ports:
+      - "7001:7001"
     volumes:
       - ./config/chains/:/hyperion-history-api/config/chains/
       - ./config/connections.json:/hyperion-history-api/config/connections.json
