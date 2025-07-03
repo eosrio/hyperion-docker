@@ -7,7 +7,7 @@
     "server_addr": "0.0.0.0",
     "server_port": 7000,
     "stream_port": 1234,
-    "server_name": "localhost: 7000",
+    "server_name": "localhost:7000",
     "provider_name": "Example Provider",
     "provider_url": "https://example.com",
     "chain_api": "",
